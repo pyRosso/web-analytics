@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Меню — кофейня «Корица», Калуга</title>
+  <meta name="description" content="Меню кофейни «Корица»: классический кофе, авторские напитки, чай и выпечка с ценами.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo" aria-label="Корица — на главную">
+        <svg class="logo__icon" viewBox="0 0 32 32" aria-hidden="true">
+          <ellipse cx="16" cy="16" rx="10" ry="14" transform="rotate(30 16 16)" fill="currentColor"/>
+          <path d="M10 26c6-4 8-14 12-20" stroke="var(--cream)" stroke-width="2" fill="none" stroke-linecap="round"/>
+        </svg>
+        Корица
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Основная навигация">
+        <ul class="nav__list">
+          <li><a href="index.html" class="nav__link">Главная</a></li>
+          <li><a href="about.html" class="nav__link">О нас</a></li>
+          <li><a href="menu.html" class="nav__link is-active" aria-current="page">Меню</a></li>
+          <li><a href="reviews.html" class="nav__link">Отзывы</a></li>
+          <li><a href="contacts.html" class="nav__link">Контакты</a></li>
+        </ul>
+        <a href="contacts.html#feedback" class="btn btn--small nav__cta">Написать нам</a>
+      </nav>
+
+      <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="page-hero">
+      <div class="container">
+        <p class="hero__eyebrow">Меню</p>
+        <h1 class="page-hero__title">Кофе, чай и выпечка</h1>
+        <p class="page-hero__text">Цены указаны в рублях. Любой напиток можно приготовить на растительном молоке.</p>
+      </div>
+    </section>
+
+    <!-- Menu -->
+    <section class="section menu">
+      <div class="container">
+
+        <div class="tabs" role="tablist" aria-label="Категории меню">
+          <button class="tabs__btn is-active" role="tab" aria-selected="true" data-filter="all">Всё</button>
+          <button class="tabs__btn" role="tab" aria-selected="false" data-filter="coffee">Кофе</button>
+          <button class="tabs__btn" role="tab" aria-selected="false" data-filter="signature">Авторские</button>
+          <button class="tabs__btn" role="tab" aria-selected="false" data-filter="tea">Чай и не кофе</button>
+          <button class="tabs__btn" role="tab" aria-selected="false" data-filter="food">Выпечка</button>
+        </div>
+
+        <ul class="menu__grid" id="menuGrid" aria-live="polite"></ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <a href="index.html" class="logo logo--light">Корица</a>
+      <div class="footer__text">
+        <p>© <span id="year"></span> Кофейня «Корица», Калуга. Сделано с любовью к кофе.</p>
+        <p class="footer__note">Учебный проект по дисциплине «Веб-аналитика». Владелец сайта: Россошанский Андрей Евгеньевич. Группа 233-321</p>
+      </div>
+      <div class="footer__side">
+        <div class="footer__counter">
+        <!--LiveInternet counter--><a href="https://www.liveinternet.ru/click"
+        target="_blank" rel="noopener"><img id="licnt8C1A" width="88" height="31" style="border:0"
+        title="LiveInternet: показано число просмотров за 24 часа, посетителей за 24 часа и за сегодня"
+        src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBTAA7"
+        alt=""/></a><script>(function(d,s){d.getElementById("licnt8C1A").src=
+        "https://counter.yadro.ru/hit?t14.6;r"+escape(d.referrer)+
+        ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+        (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+        ";h"+escape(d.title.substring(0,150))+";"+Math.random()})
+        (document,screen)</script><!--/LiveInternet-->
+        </div>
+        <a href="#top" class="footer__up">Наверх ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
