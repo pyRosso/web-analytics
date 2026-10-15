@@ -972,12 +972,83 @@ h1, h2, h3 {
 /* Footer counter */
 .footer__side {
   display: flex;
+  flex-shrink: 0;
   align-items: center;
   gap: 24px;
 }
 
+.footer__up {
+  white-space: nowrap;
+}
+
+.footer__counters {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: 10px;
+}
+
 .footer__counter {
   line-height: 0;
+}
+
+/* Clickable 88x120 badges styled after the LiveInternet counter */
+.stat-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 88px;
+  height: 120px;
+  padding: 10px 6px 8px;
+  border-radius: 4px;
+  color: #fff;
+  font-family: var(--font-body);
+  text-align: center;
+  text-decoration: none;
+  transition: transform 0.2s, filter 0.2s;
+}
+
+.stat-badge:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.1);
+}
+
+.stat-badge:focus-visible {
+  outline: 2px solid var(--caramel);
+  outline-offset: 2px;
+}
+
+.stat-badge__brand {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  opacity: 0.85;
+}
+
+.stat-badge__big {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.05;
+}
+
+.stat-badge__note {
+  font-size: 10px;
+  opacity: 0.75;
+}
+
+.stat-badge--top100 {
+  background: linear-gradient(180deg, #4d74ff, #2f54d6);
+}
+
+.stat-badge--mytracker {
+  background: linear-gradient(180deg, #2b2f38, #14161b);
+  border: 1px solid #3a3f4a;
+}
+
+.stat-badge--mytracker .stat-badge__big {
+  font-size: 17px;
 }
 
 .footer__counter img {
@@ -1188,6 +1259,18 @@ h1, h2, h3 {
     text-align: center;
     gap: 16px;
     padding: 28px 20px;
+  }
+
+  .footer__side {
+    flex-direction: column;
+    gap: 14px;
+  }
+}
+
+@media (max-width: 860px) {
+  .footer__inner {
+    flex-direction: column;
+    text-align: center;
   }
 
   .footer__side {
