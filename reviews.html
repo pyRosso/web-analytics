@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Отзывы — кофейня «Корица», Калуга</title>
+  <meta name="description" content="Отзывы гостей кофейни «Корица» в Калуге.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo" aria-label="Корица — на главную">
+        <svg class="logo__icon" viewBox="0 0 32 32" aria-hidden="true">
+          <ellipse cx="16" cy="16" rx="10" ry="14" transform="rotate(30 16 16)" fill="currentColor"/>
+          <path d="M10 26c6-4 8-14 12-20" stroke="var(--cream)" stroke-width="2" fill="none" stroke-linecap="round"/>
+        </svg>
+        Корица
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Основная навигация">
+        <ul class="nav__list">
+          <li><a href="index.html" class="nav__link">Главная</a></li>
+          <li><a href="about.html" class="nav__link">О нас</a></li>
+          <li><a href="menu.html" class="nav__link">Меню</a></li>
+          <li><a href="reviews.html" class="nav__link is-active" aria-current="page">Отзывы</a></li>
+          <li><a href="contacts.html" class="nav__link">Контакты</a></li>
+        </ul>
+        <a href="contacts.html#feedback" class="btn btn--small nav__cta">Написать нам</a>
+      </nav>
+
+      <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="page-hero">
+      <div class="container">
+        <p class="hero__eyebrow">Отзывы</p>
+        <h1 class="page-hero__title">Что говорят гости</h1>
+        <p class="page-hero__text">Собрали несколько отзывов наших постоянных гостей.</p>
+      </div>
+    </section>
+
+    <!-- Reviews -->
+    <section class="section reviews">
+      <div class="container">
+        <div class="reviews__grid">
+          <blockquote class="review reveal">
+            <p>«Лучший флэт уайт в районе. Бариста запомнили, что я пью на овсяном, уже со второго визита».</p>
+            <footer>— Марина, постоянная гостья</footer>
+          </blockquote>
+          <blockquote class="review reveal">
+            <p>«Прихожу работать по утрам: тихо, вкусно и всегда есть свободная розетка. Раф с халвой — must try».</p>
+            <footer>— Алексей, дизайнер</footer>
+          </blockquote>
+          <blockquote class="review reveal">
+            <p>«Круассаны как в Париже. Беру с собой коробку для коллег каждую пятницу».</p>
+            <footer>— Ирина, менеджер</footer>
+          </blockquote>
+          <blockquote class="review reveal">
+            <p>«Отмечали здесь день рождения подруги — нам собрали отдельный стол и испекли торт. Очень душевно».</p>
+            <footer>— Ольга, студентка КГУ</footer>
+          </blockquote>
+          <blockquote class="review reveal">
+            <p>«Покупаю зерно домой: обжарка всегда свежая, а бариста подсказывают, как варить в турке».</p>
+            <footer>— Дмитрий, инженер</footer>
+          </blockquote>
+          <blockquote class="review reveal">
+            <p>«Лучший пряный мокко в Калуге. Зимой — обязательная остановка по дороге на работу».</p>
+            <footer>— Сергей, преподаватель</footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- Rating -->
+    <section class="section rating">
+      <div class="container rating__inner reveal">
+        <div class="rating__score"><strong>4.9</strong><span>средняя оценка гостей</span></div>
+        <p class="rating__text">Оставить отзыв можно через <a href="contacts.html#feedback">форму обратной связи</a> — мы читаем каждое сообщение и отвечаем в течение дня.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <a href="index.html" class="logo logo--light">Корица</a>
+      <div class="footer__text">
+        <p>© <span id="year"></span> Кофейня «Корица», Калуга. Сделано с любовью к кофе.</p>
+        <p class="footer__note">Учебный проект по дисциплине «Веб-аналитика». Владелец сайта: Россошанский Андрей Евгеньевич. Группа 233-321</p>
+      </div>
+      <div class="footer__side">
+        <div class="footer__counter">
+<!--LiveInternet counter--><a href="https://www.liveinternet.ru/click"
+target="_blank"><img id="licntDC97" width="88" height="120" style="border:0" 
+title="LiveInternet: показано количество просмотров и посетителей"
+src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+alt=""/></a><script>(function(d,s){d.getElementById("licntDC97").src=
+"https://counter.yadro.ru/hit?t27.6;r"+escape(d.referrer)+
+((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+(s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+";h"+escape(d.title.substring(0,150))+";"+Math.random()})
+(document,screen)</script><!--/LiveInternet-->
+        </div>
+        <a href="#top" class="footer__up">Наверх ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

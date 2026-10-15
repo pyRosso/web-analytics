@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>О нас — кофейня «Корица», Калуга</title>
+  <meta name="description" content="История кофейни «Корица», собственная обжарка и как мы готовим кофе.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo" aria-label="Корица — на главную">
+        <svg class="logo__icon" viewBox="0 0 32 32" aria-hidden="true">
+          <ellipse cx="16" cy="16" rx="10" ry="14" transform="rotate(30 16 16)" fill="currentColor"/>
+          <path d="M10 26c6-4 8-14 12-20" stroke="var(--cream)" stroke-width="2" fill="none" stroke-linecap="round"/>
+        </svg>
+        Корица
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Основная навигация">
+        <ul class="nav__list">
+          <li><a href="index.html" class="nav__link">Главная</a></li>
+          <li><a href="about.html" class="nav__link is-active" aria-current="page">О нас</a></li>
+          <li><a href="menu.html" class="nav__link">Меню</a></li>
+          <li><a href="reviews.html" class="nav__link">Отзывы</a></li>
+          <li><a href="contacts.html" class="nav__link">Контакты</a></li>
+        </ul>
+        <a href="contacts.html#feedback" class="btn btn--small nav__cta">Написать нам</a>
+      </nav>
+
+      <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="page-hero">
+      <div class="container">
+        <p class="hero__eyebrow">О нас</p>
+        <h1 class="page-hero__title">Маленькая кофейня в центре Калуги</h1>
+        <p class="page-hero__text">Рассказываем, откуда берётся наш кофе и почему гости возвращаются.</p>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="section about">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="section__eyebrow">Почему мы</p>
+          <h2 class="section__title">Что отличает «Корицу»</h2>
+        </div>
+        <div class="features">
+          <article class="feature reveal">
+            <div class="feature__icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C7 6 5 10 5 14a7 7 0 0 0 14 0c0-4-2-8-7-12Z"/></svg>
+            </div>
+            <h3 class="feature__title">Своя обжарка</h3>
+            <p class="feature__text">Зерно из Эфиопии, Колумбии и Бразилии. Обжариваем небольшими партиями, чтобы кофе всегда был свежим.</p>
+          </article>
+          <article class="feature reveal">
+            <div class="feature__icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 14c0-5 4-9 8-9s8 4 8 9H4Zm-1 2h18v2a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-2Z"/></svg>
+            </div>
+            <h3 class="feature__title">Выпечка с утра</h3>
+            <p class="feature__text">Круассаны, синнабоны и чизкейки готовим на месте. К 8 утра всё уже на витрине.</p>
+          </article>
+          <article class="feature reveal">
+            <div class="feature__icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18v11H8l-5 4V5Zm5 5h2v2H8v-2Zm4 0h2v2h-2v-2Zm4 0h2v2h-2v-2Z"/></svg>
+            </div>
+            <h3 class="feature__title">Уютное место</h3>
+            <p class="feature__text">Быстрый Wi‑Fi, розетки у каждого столика и тихая музыка — приходите работать или встречаться с друзьями.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Story -->
+    <section class="section story">
+      <div class="container story__inner">
+        <div class="story__text reveal">
+          <p class="section__eyebrow">Наша история</p>
+          <h2 class="section__title">От кофейной тележки до своей обжарки</h2>
+          <p>«Корица» началась в 2016 году с кофейной тележки у Каменного моста. Через два года мы открыли маленький зал на улице Кирова, а в 2021 году поставили собственный ростер, чтобы контролировать вкус от зелёного зерна до чашки.</p>
+          <p>Сегодня у нас 24 посадочных места, летняя веранда и команда из восьми бариста и кондитеров. Мы по-прежнему знаем постоянных гостей по имени и помним, кто пьёт капучино на овсяном.</p>
+        </div>
+        <ul class="timeline reveal">
+          <li><strong>2016</strong><span>Кофейная тележка у Каменного моста</span></li>
+          <li><strong>2018</strong><span>Открытие зала на ул. Кирова</span></li>
+          <li><strong>2021</strong><span>Собственная обжарка зерна</span></li>
+          <li><strong>2024</strong><span>Летняя веранда и своя выпечка</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Steps -->
+    <section class="section steps">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="section__eyebrow">Как мы готовим</p>
+          <h2 class="section__title">Четыре шага до вашей чашки</h2>
+        </div>
+        <ol class="steps__list">
+          <li class="step reveal"><span class="step__num">01</span><h3>Выбор зерна</h3><p>Закупаем зелёное зерно урожая текущего года у проверенных импортёров.</p></li>
+          <li class="step reveal"><span class="step__num">02</span><h3>Обжарка</h3><p>Обжариваем партиями по 5 кг и даём зерну отдохнуть 5–7 дней.</p></li>
+          <li class="step reveal"><span class="step__num">03</span><h3>Настройка</h3><p>Каждое утро бариста настраивают помол и дегустируют эспрессо.</p></li>
+          <li class="step reveal"><span class="step__num">04</span><h3>Подача</h3><p>Готовим напиток при вас и подаём в течение минуты.</p></li>
+        </ol>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <a href="index.html" class="logo logo--light">Корица</a>
+      <div class="footer__text">
+        <p>© <span id="year"></span> Кофейня «Корица», Калуга. Сделано с любовью к кофе.</p>
+        <p class="footer__note">Учебный проект по дисциплине «Веб-аналитика». Владелец сайта: Россошанский Андрей Евгеньевич. Группа 233-321</p>
+      </div>
+      <div class="footer__side">
+        <div class="footer__counter">
+<!--LiveInternet counter--><a href="https://www.liveinternet.ru/click"
+target="_blank"><img id="licntDC97" width="88" height="120" style="border:0" 
+title="LiveInternet: показано количество просмотров и посетителей"
+src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+alt=""/></a><script>(function(d,s){d.getElementById("licntDC97").src=
+"https://counter.yadro.ru/hit?t27.6;r"+escape(d.referrer)+
+((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+(s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+";h"+escape(d.title.substring(0,150))+";"+Math.random()})
+(document,screen)</script><!--/LiveInternet-->
+        </div>
+        <a href="#top" class="footer__up">Наверх ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
