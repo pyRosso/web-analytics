@@ -16,6 +16,7 @@
     { cat: "tea", emoji: "🍵", name: "Матча латте", desc: "Японская матча на молоке на выбор", price: 310 },
     { cat: "tea", emoji: "🫖", name: "Чай листовой", desc: "Сенча, ассам, улун или травяной, 500 мл", price: 240 },
     { cat: "tea", emoji: "🍫", name: "Горячий шоколад", desc: "Бельгийский шоколад 54%", price: 290 },
+    { cat: "tea", emoji: "☕", name: "Какао", desc: "На молоке, с маршмеллоу, 300 мл", price: 240 },
     { cat: "tea", emoji: "🍋", name: "Лимонад дня", desc: "Спросите у бариста, какой сегодня", price: 260 },
     { cat: "food", emoji: "🥐", name: "Круассан", desc: "Классический, на французском масле", price: 180, featured: true },
     { cat: "food", emoji: "🥐", name: "Миндальный круассан", desc: "С франжипаном и миндальными лепестками", price: 240 },
@@ -24,6 +25,18 @@
   ];
 
   const formatPrice = (n) => n.toLocaleString("ru-RU") + " ₽";
+
+  /* ===== Rambler Top-100 custom events ===== */
+  function trackEvent(name, data) {
+    try {
+      if (window.top100Counter) window.top100Counter.trackEvent(name, data || {});
+    } catch (e) {}
+  }
+
+  document.addEventListener("click", (e) => {
+    const link = e.target.closest('a[href^="tel:"]');
+    if (link) trackEvent("phone_click", { page: location.pathname });
+  });
 
   /* ===== Render menu ===== */
   const grid = document.getElementById("menuGrid");
@@ -59,6 +72,7 @@
       tab.classList.add("is-active");
       tab.setAttribute("aria-selected", "true");
       renderMenu(tab.dataset.filter);
+      trackEvent("menu_category", { category: tab.dataset.filter });
     });
   });
 
@@ -206,6 +220,7 @@
         submitBtn.textContent = "Отправить";
         status.textContent = `Спасибо, ${data.name.trim()}! Мы ответим на ${data.email.trim()} в течение дня.`;
         status.classList.add("is-success");
+        trackEvent("feedback_form_sent", { topic: data.topic });
         form.reset();
       }, 900);
     });
