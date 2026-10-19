@@ -900,6 +900,55 @@ h1, h2, h3 {
   color: var(--muted);
 }
 
+/* Employee of the month */
+.employee {
+  background: var(--white);
+}
+
+.employee__inner {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: 56px;
+  align-items: center;
+  max-width: 980px;
+}
+
+.employee__photo {
+  position: relative;
+  margin: 0;
+}
+
+.employee__photo img {
+  width: 100%;
+  height: auto;
+  border-radius: 24px;
+  box-shadow: var(--shadow);
+  transform: rotate(-2deg);
+}
+
+.employee__badge {
+  position: absolute;
+  left: 50%;
+  bottom: -16px;
+  transform: translateX(-50%);
+  padding: 8px 18px;
+  border-radius: 999px;
+  background: var(--caramel);
+  color: var(--white);
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+  box-shadow: 0 6px 16px rgba(43, 26, 18, 0.2);
+}
+
+.employee__text .section__title {
+  margin-bottom: 18px;
+}
+
+.employee__text p:not(.section__eyebrow) {
+  color: var(--muted);
+}
+
 /* Steps */
 .steps {
   background: var(--white);
@@ -1276,5 +1325,18 @@ h1, h2, h3 {
   .footer__side {
     flex-direction: column;
     gap: 14px;
+  }
+}
+
+@media (max-width: 860px) {
+  .employee__inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .employee__photo {
+    max-width: 320px;
+    margin: 0 auto;
   }
 }
