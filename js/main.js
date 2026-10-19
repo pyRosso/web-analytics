@@ -26,15 +26,15 @@
 
   const formatPrice = (n) => n.toLocaleString("ru-RU") + " ₽";
 
-  /* ===== Custom events: Rambler Top-100 + Top.Mail.Ru goals ===== */
-  const TOP_MAIL_RU_ID = "3804408";
+  /* ===== Custom events: Rambler Top-100 + MyTracker goals ===== */
+  const MYTRACKER_ID = "3804408";
 
   function trackEvent(name, data) {
     try {
       if (window.top100Counter) window.top100Counter.trackEvent(name, data || {});
     } catch (e) {}
     try {
-      (window._tmr = window._tmr || []).push({ id: TOP_MAIL_RU_ID, type: "reachGoal", goal: name });
+      (window._tmr = window._tmr || []).push({ id: MYTRACKER_ID, type: "reachGoal", goal: name });
     } catch (e) {}
   }
 
